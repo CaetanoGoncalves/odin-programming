@@ -32,6 +32,7 @@ main :: proc() {
     new_w := i32(ws.ws_col)
     new_h := i32(ws.ws_row) * 2
     out := make([]u8, new_w * new_h * channels)
+    defer delete(out)
     stbi.resize_uint8(pixels, width, height, 0,
                    raw_data(out), new_w, new_h, 0,
                    channels)

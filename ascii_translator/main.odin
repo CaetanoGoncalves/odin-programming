@@ -19,6 +19,7 @@ main :: proc() {
     defer delete(content)
 
     content_array := [dynamic]string{}
+    defer delete(content_array)
     text := string(content)
     for line in strings.split_lines_iterator(&text) {
         append(&content_array, line)   
@@ -28,6 +29,7 @@ main :: proc() {
         return
     }
     first_line_array, error := strings.split(content_array[0], " ");
+    defer delete(first_line_array)
     starts_at := strings.index(first_line_array[0], "flf2a") + len("flf2a")
     hardblank := string([]u8{(first_line_array[0][starts_at])});
     
@@ -38,6 +40,7 @@ main :: proc() {
         return
     }
     result_arr := make(map[int][]string)
+    defer delete(result_arr)
     for i := 0; i < 95; i += 1 {
         start := comments + 1 + i * height
         arr := content_array[start:start+height]
@@ -49,6 +52,7 @@ main :: proc() {
     }
     input_text := os.args[2]
     char_order := [dynamic][]string{}
+    defer delete(char_order)
     for c, index in input_text {
         append(&char_order, result_arr[int(c)])
     }
