@@ -1,0 +1,6 @@
+[submodule "encoding_dotenv/libs/dotenv"]
+	path = encoding_dotenv/libs/dotenv
+	url = https://github.com/CaetanoGoncalves/odin-dotenv
+[submodule "libs/dotenv"]
+	path = libs/dotenv
+	url = https://github.com/CaetanoGoncalves/odin-dotenv
