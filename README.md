@@ -26,6 +26,7 @@ Converts images into ASCII art, rendering visual content as characters in the te
 ---
 
 ## Getting Started
+
 Clone the repository:
 
 ```bash
