@@ -17,9 +17,6 @@ A simple HTTP client built in Odin to send and receive HTTP requests.
 ### image_to_ascii
 Converts images into ASCII art, rendering visual content as characters in the terminal.
 
-### encoding_dotenv
-
-dotenv parser.
 ---
 
 ## Requirements
@@ -56,9 +53,6 @@ odin-programming/
 ├── image_to_ascii/
 ├── odinfmt.json
 └── ols.json
-.
-.
-.
 ```
 
 ---
